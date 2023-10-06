@@ -60,14 +60,14 @@ Specific instances might not always be publicly because of the nature of the att
 
 ### Subtask 2: Repeater
 
-After some requests if find out that the method used to create a new dvwaSession cookie is to take the time and express it in epoch timestamp. 
-At the begginning, after 2-3 request I was thinking about an integer increased by a formula or something like that, but after i noticed that the new dvwaSession cookie ends always like the time in seconds. So I checked other 2-3 requests, I checked also the old requests, and I found out that I was right.
+After some requests I find out that the method used to create a new dvwaSession cookie is to take current time and express it in epoch timestamp. 
+At the begginning, after 2-3 request I was thinking about an integer increased by a formula or something like that, but after I noticed that the new dvwaSession cookie ends always like the current time in seconds. So I checked other 2-3 requests, I checked also the old requests, and I found out that I was right.
 
 ![Repeater](img/repeater.png)
 
 ### Subtask 3: Intruder
 
-The bruteforce attempt that was successful is the first one and the sixth one with:
+The bruteforce attempt that was successful is the first one and the sixth one:
 
         1. Username = admin
            Password = password
@@ -75,18 +75,18 @@ The bruteforce attempt that was successful is the first one and the sixth one wi
         6. Username = gordonb
            Password = abc123
 
-(actually it is the second one if we count the 0-attempt which is the attempt with blank credentials).
+(actually they are the second and the seventh if we count the 0-attempt which is the attempt with blank credentials).
 
-I came with this conclusion because of the response length. I analyzed the response and I noticed that the length is pretty much the same with every attempt but in those 2 it is different.
-For the other requests is about 4702-4703 but the length of those 2 attempts is more.
+I came with this conclusion because of the response length. I analyzed the responses and I noticed that the length is pretty much the same with every attempt but in those 2 it is different.
+For the other requests is about 4702-4703 but the length of those 2 attempts is more, about 4740.
 
 
 ![BruteForce](img/brute_force.png)
 
 
-After noticed that I analyzed the response and the length is more because of the changing of the return message.
+After that, I analyzed the response and the length is more because of the changing of the return message.
 One is "Username and/or password incorrect." and one is "Welcome to the password protected area admin".
-There are also other changes in the response page, but for me this one is the important one.
+There are also other changes in the response page, but for me this one is the important one for checking the correct login.
 
 Unsuccess | Success
 :-------------------------:|:-------------------------:
