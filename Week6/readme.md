@@ -88,4 +88,5 @@ Continuous monitoring of the supply chain and its actors is vital. Utilizing [ND
 1. I used Falco
 2. [DockerFile for image](dockers/afterLintDockerfile)
 3. <br>![Warning Falco](img/falco-screenshot.jpeg)
-4.       sudo docker run --privileged -it dockerfile /bin/sh
+4. The falco condition rule is:<br><code>condition: container and container.privileged=true</code><br>
+   and I run the docker as:<br><code>sudo docker run --privileged -it dockerfile /bin/sh</code>
