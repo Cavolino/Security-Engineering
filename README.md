@@ -1,4 +1,4 @@
-# <center>Security Engineering</center>
+# <p align="center">Security Engineering</p>
 
 <p align="center">
   <a href="#track">Track</a> •
