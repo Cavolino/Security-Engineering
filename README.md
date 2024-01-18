@@ -24,10 +24,7 @@
 <hr>
 <br><br>
 
-<div style="float: right">
-
 ##### Authors:
 
 *Nov 2023*<br>
 **Davide Moricoli**
-</div>
